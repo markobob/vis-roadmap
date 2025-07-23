@@ -5,9 +5,9 @@ import Card from '../ui/Card';
 
 export default function Mission() {
   const missionPoints = [
-    "Build a connected, intelligent data ecosystem for the Customer team.",
+    "Build a connected, intelligent data ecosystem for the Customer team and beyond.",
     "Give every user the right insight, at the right time, in the right format.",
-    "From journeys to segments, from analysts to execs — powering better decisions at every level."
+    "From single journeys to segments, from analysts to execs — powering better decisions and force multipliers at every level."
   ];
 
   return (

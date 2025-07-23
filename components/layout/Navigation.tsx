@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const navigationItems = [
   { id: 'mission', label: 'Mission', emoji: '🎯' },
@@ -16,8 +16,70 @@ const navigationItems = [
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState('mission');
 
+  useEffect(() => {
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const sections = navigationItems.map(item => {
+            const element = document.getElementById(item.id);
+            if (!element) return null;
+            
+            const rect = element.getBoundingClientRect();
+            const elementTop = rect.top;
+            const elementHeight = rect.height;
+            const elementCenter = elementTop + elementHeight / 2;
+            
+            return {
+              id: item.id,
+              element,
+              top: elementTop,
+              bottom: rect.bottom,
+              center: elementCenter,
+              isVisible: elementTop < window.innerHeight && rect.bottom > 0
+            };
+          }).filter(Boolean);
+
+          // Find the section that's most prominently visible
+          let activeId = '';
+          let bestScore = -Infinity;
+
+          sections.forEach(section => {
+            if (!section || !section.isVisible) return;
+            
+            const viewportCenter = window.innerHeight / 2;
+            const distanceFromCenter = Math.abs(section.center - viewportCenter);
+            const score = -distanceFromCenter; // Closer to center = higher score
+            
+            if (score > bestScore) {
+              bestScore = score;
+              activeId = section.id;
+            }
+          });
+
+          if (activeId && activeId !== activeSection) {
+            setActiveSection(activeId);
+          }
+          
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Initial check
+    setTimeout(handleScroll, 100); // Small delay to ensure sections are rendered
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [activeSection]);
+
   const scrollToSection = (sectionId: string) => {
-    setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -43,10 +105,10 @@ export default function Navigation() {
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection(item.id)}
               className={`
-                flex items-center space-x-2 px-4 py-2 rounded-full whitespace-nowrap
-                transition-all duration-300
+                relative flex items-center space-x-2 px-4 py-2 rounded-full whitespace-nowrap
+                transition-all duration-300 ease-out
                 ${activeSection === item.id
-                  ? 'bg-black dark:bg-white text-white dark:text-black'
+                  ? 'bg-black dark:bg-white text-white dark:text-black shadow-lg scale-105'
                   : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800'
                 }
               `}

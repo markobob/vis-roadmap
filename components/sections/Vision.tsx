@@ -5,30 +5,31 @@ import { useState } from 'react';
 import Card from '../ui/Card';
 import PythonNotebookMockup from '../mockups/PythonNotebookMockup';
 import ExecDigestMockup from '../mockups/ExecDigestMockup';
+import DataDiscoveryMockup from '../mockups/DataDiscoveryMockup';
 
 export default function Vision() {
   const [activeDemo, setActiveDemo] = useState<string | null>(null);
 
   const visionScenarios = [
     {
-      icon: '👨‍💻',
-      scenario: 'Analysts type bq.cust.journey(1234) to surface full journeys.',
-      demoKey: 'notebook'
-    },
-    {
-      icon: '📰',
-      scenario: 'Execs get monthly digests that read like interactive articles, not spreadsheets.',
-      demoKey: 'digest'
-    },
-    {
       icon: '📊',
-      scenario: 'CRM teams track campaign outcomes in real time, across channels.',
+      scenario: 'CRM teams track comprehensive campaign outcomes in near real time, across types and segments.  Anyone gets answers to their customer related questions in a few clicks.',
       demoKey: null
     },
     {
       icon: '⚡',
       scenario: 'Every team member, regardless of role, finds what they need — fast.',
-      demoKey: null
+      demoKey: 'discovery'
+    },
+    {
+      icon: '📰',
+      scenario: 'Execs get monthly digests that read like interactive articles, not analyst tools.',
+      demoKey: 'digest'
+    },
+    {
+      icon: '👨‍💻',
+      scenario: 'Analyst force multiplier with Customer data API.',
+      demoKey: 'notebook'
     }
   ];
 
@@ -45,12 +46,12 @@ export default function Vision() {
     },
     {
       title: 'Scalable',
-      description: 'Works for 1 campaign or 100.',
+      description: 'Works for 1 campaign or 1000 - single customer or entire segment.',
       icon: '📈'
     },
     {
       title: 'Trustworthy',
-      description: 'Governance + quality by design.',
+      description: 'Governance + quality built in.',
       icon: '🛡️'
     }
   ];
@@ -66,7 +67,7 @@ export default function Vision() {
       >
         <div className="inline-flex items-center space-x-3 px-4 py-2 bg-purple-50 dark:bg-purple-900/20 rounded-full">
           <span className="text-2xl">🔮</span>
-          <span className="text-sm font-medium text-purple-700 dark:text-purple-300">Where We're Going</span>
+          <span className="text-sm font-medium text-purple-700 dark:text-purple-300">Where We&apos;re Going</span>
         </div>
         
         <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
@@ -84,7 +85,7 @@ export default function Vision() {
           className="text-center"
         >
           <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-8">
-            "Imagine a world where…"
+            &quot;Imagine a world &hellip;&quot;
           </h3>
         </motion.div>        <div className="grid md:grid-cols-2 gap-6">
           {visionScenarios.map((scenario, index) => (
@@ -151,6 +152,25 @@ export default function Vision() {
               </p>
             </div>
             <ExecDigestMockup />
+          </motion.div>
+        )}
+
+        {activeDemo === 'discovery' && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mt-8"
+          >
+            <div className="text-center mb-6">
+              <h4 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                Live Demo: One-Stop Data Discovery
+              </h4>
+              <p className="text-gray-600 dark:text-gray-400">
+                See how team members can instantly find the right data, reports, and insights for their needs
+              </p>
+            </div>
+            <DataDiscoveryMockup />
           </motion.div>
         )}
       </div>

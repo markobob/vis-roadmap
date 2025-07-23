@@ -7,27 +7,35 @@ export default function Outcomes() {
   const outcomes = [
     {
       icon: '📈',
-      title: 'CRM optimises campaign design mid-flight',
-      description: 'Real-time adjustments based on performance data',
-      impact: 'Increase campaign ROI by 40%'
+      title: 'CRM teams can now optimise campaigns while they&apos;re running',
+      description: 'Live performance data flows directly into campaign management tools',
+      impact: 'What becomes possible: Mid-flight campaign pivots based on real customer behavior, not yesterday\'s reports',
+      timeline: 'Q4 2025',
+      enabledBy: 'Campaign Dashboard + Data Science Integration'
     },
     {
       icon: '🔍',
-      title: 'Insight team explores drivers of segment growth',
-      description: 'Deep-dive analytics with intuitive interfaces',
-      impact: 'Reduce analysis time by 70%'
+      title: 'Insight teams can drill from "what happened" to "why it happened"',
+      description: 'Seamless navigation from segment trends to individual customer journeys',
+      impact: 'What becomes possible: Understanding the story behind the numbers without switching between 5 different tools',
+      timeline: 'Q3 2025',
+      enabledBy: 'Customer Dashboard Phase 2'
     },
     {
       icon: '🧰',
-      title: 'Analysts build repeatable code without pipelines',
-      description: 'Self-service analytics with powerful APIs',
-      impact: 'Enable 10x faster insight generation'
+      title: 'Analysts can build production-ready insights without IT',
+      description: 'Self-service analytics with enterprise-grade APIs and reusable components',
+      impact: 'What becomes possible: Going from question to shareable analysis in minutes, not weeks of pipeline requests',
+      timeline: 'Q1 2026',
+      enabledBy: 'Python API for Analysts'
     },
     {
       icon: '🎯',
-      title: 'Execs scan KPIs and act — without filtering through reports',
-      description: 'Direct access to actionable insights',
-      impact: 'Accelerate decision-making by 80%'
+      title: 'Executives get insights that read like stories, not spreadsheets',
+      description: 'Contextual, narrative-driven summaries with interactive drill-downs',
+      impact: 'What becomes possible: Making strategic decisions from insights, not hunting through data dumps',
+      timeline: 'Q1 2026',
+      enabledBy: 'Multi-Format Reporting + Data Interface Evolution'
     }
   ];
 
@@ -77,20 +85,33 @@ export default function Outcomes() {
                   </div>
                 </div>
                 
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-900/20 dark:to-blue-900/20 p-4 rounded-xl border border-emerald-200/50 dark:border-emerald-800/50"
-                >
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
-                      Impact: {outcome.impact}
-                    </span>
+                <div className="space-y-3">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
+                    viewport={{ once: true }}
+                    className="bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-900/20 dark:to-blue-900/20 p-4 rounded-xl border border-emerald-200/50 dark:border-emerald-800/50"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                      <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+                        Impact: {outcome.impact}
+                      </span>
+                    </div>
+                  </motion.div>
+
+                  <div className="flex items-center justify-between text-sm">
+                    <div className="flex items-center space-x-2">
+                      <span>📅</span>
+                      <span className="font-medium text-blue-600 dark:text-blue-400">{outcome.timeline}</span>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-xs text-gray-500 dark:text-gray-400">Enabled by:</span>
+                      <p className="text-xs font-medium text-gray-700 dark:text-gray-300">{outcome.enabledBy}</p>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </Card>
           </motion.div>
@@ -168,9 +189,9 @@ export default function Outcomes() {
           <div className="text-5xl">🚀</div>
           <h4 className="text-3xl font-bold">Ready for Launch</h4>
           <p className="text-xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            The future of data visualisation isn't just about better charts—it's about 
+            The future of data visualisation isn&apos;t just about better charts—it&apos;s about 
             empowering every decision maker with the right insight at the right moment. 
-            <strong className="block mt-4">Let's build it together.</strong>
+            <strong className="block mt-4">Let&apos;s build it together.</strong>
           </p>
         </div>
       </motion.div>

@@ -10,10 +10,13 @@ export default function Q3Roadmap() {
       title: 'Customer Dashboard – Phase 2',
       description: 'Targeted views for CRM, Loyalty, Insight, and CX.',
       details: [
-        'Drill from segment-level to customer journeys',
+        'Flagship dashboard for core customer insights',
         'Purpose: Clarity on "what\'s happening" and "for whom"'
       ],
-      priority: 'High'
+      priority: 'High',
+      timeline: 'Jul - Sep 2025',
+      beneficiaries: ['CRM Teams', 'Loyalty Teams', 'Insight Teams', 'CX Teams'],
+      outcome: 'Flagship core insights from high-level segments to individual customer stories'
     },
     {
       icon: '📊',
@@ -23,25 +26,34 @@ export default function Q3Roadmap() {
         'Purpose: Optimise channel mix and campaign design',
         'Decision support: "What works where, and for whom?"'
       ],
-      priority: 'High'
+      priority: 'High',
+      timeline: 'Aug - Oct 2025',
+      beneficiaries: ['CRM Team', 'Loyalty Team'],
+      outcome: 'Campaign teams can see what works across all channels in one place'
     },
     {
       icon: '⚙️',
       title: 'TP Connect Rebuild',
       description: 'Re-platform as Canvas App + Databricks backend.',
       details: [
-        'Faster, more robust, scalable campaign ops'
+        'Faster, more robust, scalable and greater dev efficiency.'
       ],
-      priority: 'Medium'
+      priority: 'High',
+      timeline: 'Sep - Nov 2025',
+      beneficiaries: ['TSPs', 'TradePoint Management'],
+      outcome: 'Less bugs, rapid delivery, future-proofed for growth'
     },
     {
       icon: '🤖',
       title: 'Automation Maturity',
       description: 'Fully in-house, robust quality checks.',
       details: [
-        'Reliable foundation for live reporting and decision support'
+        'Reliable foundation for reporting, analytics and process.'
       ],
-      priority: 'High'
+      priority: 'Medium',
+      timeline: 'Jul - Dec 2025',
+      beneficiaries: ['All Teams'],
+      outcome: 'Teams can trust the data without second-guessing its freshness or accuracy'
     }
   ];
 
@@ -56,13 +68,17 @@ export default function Q3Roadmap() {
       >
         <div className="inline-flex items-center space-x-3 px-4 py-2 bg-orange-50 dark:bg-orange-900/20 rounded-full">
           <span className="text-2xl">🚀</span>
-          <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Q3 Focus Areas</span>
+          <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Jul - Dec 2025</span>
         </div>
         
         <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
           H2 Kick-Off:<br />
-          Big Leaps in Q3
+          Big Leaps in Q3 2025
         </h2>
+        
+        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          Foundation-building phase: Core dashboards, automation maturity, and platform rebuilds
+        </p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -113,38 +129,45 @@ export default function Q3Roadmap() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Timeline, Beneficiaries, and Outcomes */}
+              <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 space-y-3">
+                {/* <div className="flex items-center space-x-2">
+                  <span className="text-sm">📅</span>
+                  <span className="text-sm font-medium text-blue-600 dark:text-blue-400">{item.timeline}</span>
+                </div> */}
+                
+                <div className="space-y-1">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-sm">👥</span>
+                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400">Who this helps:</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1 ml-6">
+                    {item.beneficiaries.map((beneficiary, bIndex) => (
+                      <span
+                        key={bIndex}
+                        className="px-2 py-1 text-xs bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 rounded-md"
+                      >
+                        {beneficiary}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-2">
+                  <span className="text-sm">🎯</span>
+                  <div className="space-y-1">
+                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400">Expected outcome:</span>
+                    <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">{item.outcome}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </Card>
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        viewport={{ once: true }}
-        className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/10 dark:to-red-900/10 p-8 rounded-2xl border border-orange-200/50 dark:border-orange-800/50"
-      >
-        <div className="text-center space-y-4">
-          <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-            Q3 Success Metrics
-          </h4>
-          <div className="grid md:grid-cols-3 gap-4 text-sm">
-            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-              <div className="font-medium text-orange-600 dark:text-orange-400">Delivery</div>
-              <div className="text-gray-600 dark:text-gray-400">4 major initiatives completed</div>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-              <div className="font-medium text-orange-600 dark:text-orange-400">Impact</div>
-              <div className="text-gray-600 dark:text-gray-400">50% faster insight generation</div>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-              <div className="font-medium text-orange-600 dark:text-orange-400">Adoption</div>
-              <div className="text-gray-600 dark:text-gray-400">90% team engagement</div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+     
     </section>
   );
 }

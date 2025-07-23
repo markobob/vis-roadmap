@@ -74,7 +74,7 @@ export default function SuperSuite() {
             One Ecosystem → Many Tools
           </h3>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            "Not a dozen dashboards. One ecosystem. Modular. Composable. Made for action."
+            &quot;Not a dozen dashboards. One ecosystem. Modular. Composable. Made for action.&quot;
           </p>
         </div>
 

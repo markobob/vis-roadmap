@@ -8,7 +8,7 @@ export default function CurrentState() {
     {
       icon: '🔄',
       title: 'Databricks Migration',
-      description: 'In progress (complete Q3); unlocking scale and flexibility.',
+      description: 'In progress (complete start Q3); unlocking scale, flexibility and future innovation.',
       status: 'In Progress'
     },
     {
@@ -20,14 +20,14 @@ export default function CurrentState() {
     {
       icon: '🤖',
       title: 'In-House Automation',
-      description: 'Now owned in-house, with built-in data quality checks.',
-      status: 'Complete'
+      description: 'Ownership in-house, with built-in data quality checks.',
+      status: 'In Progress'
     },
     {
       icon: '📊',
       title: 'OKR Dashboard & Exec Digest',
-      description: 'Now live — setting the standard for targeted, user-first insight.',
-      status: 'Live'
+      description: 'Setting the standard for targeted medium, joined insight.',
+      status: 'In Progress'
     }
   ];
 
