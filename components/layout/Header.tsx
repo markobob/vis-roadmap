@@ -34,7 +34,7 @@ export default function Header() {
           </motion.div>
           <div>
             <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-              Data Visualisation Roadmap
+              Customer Vis & Auto Roadmap
             </h1>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               H2 & Beyond

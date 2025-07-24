@@ -23,16 +23,17 @@ export default function Q4Beyond() {
       outcome: 'Model insights become part of everyday reporting, not special projects'
     },
     {
-      icon: '🧱',
-      title: 'Python API for Analysts',
-      description: 'e.g. bq.cust.journey(1234)',
+      icon: '🌐',
+      title: 'Data Interface Evolution',
+      description: '"One-stop shop" for all customer data views.',
       details: [
-        'Purpose: Lower barrier to advanced insight, control, force multiplier, single source truth',
-        'Outcome: Reusability, speed, analyst empowerment'
+        'Composable metrics, embedded commentary, smart search',
+        'Vision: Ask a question → get an answer (not just a chart)'
       ],
-      timeline: 'Nov 2025 - Jan 2026',
-      beneficiaries: ['Analysts', 'Devs', 'Internal Customers'],
-      outcome: 'Analysts can build sophisticated insight without advanced coding skills or waiting for devs, save time and align on a single source of truth',
+      timeline: 'Feb - Apr 2026',
+      beneficiaries: ['All Teams', 'Business Users', 'Analysts'],
+      outcome: 'Anyone can ask a business question and get a complete answer, not just charts',
+      demoKey: 'discovery'
     },
     {
       icon: '🗞️',
@@ -46,17 +47,16 @@ export default function Q4Beyond() {
       outcome: 'Executives can consume more digestable insights like articles, not data tables'
     },
     {
-      icon: '🌐',
-      title: 'Data Interface Evolution',
-      description: '"One-stop shop" for all customer data views.',
+      icon: '🧱',
+      title: 'Python API for Analysts',
+      description: 'e.g. bq.cust.journey(1234)',
       details: [
-        'Composable metrics, embedded commentary, smart search',
-        'Vision: Ask a question → get an answer (not just a chart)'
+        'Purpose: Lower barrier to advanced insight, control, force multiplier, single source truth',
+        'Outcome: Reusability, speed, analyst empowerment'
       ],
-      timeline: 'Feb - Apr 2026',
-      beneficiaries: ['All Teams', 'Business Users', 'Analysts'],
-      outcome: 'Anyone can ask a business question and get a complete answer, not just charts',
-      demoKey: 'discovery'
+      timeline: 'Nov 2025 - Jan 2026',
+      beneficiaries: ['Analysts', 'Devs', 'Internal Customers'],
+      outcome: 'Analysts can build sophisticated insight without advanced coding skills or waiting for devs, save time and align on a single source of truth',
     },
     {
       icon: '🤖',
@@ -84,7 +84,7 @@ export default function Q4Beyond() {
       >
         <div className="inline-flex items-center space-x-3 px-4 py-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-full">
           <span className="text-2xl">🌟</span>
-          <span className="text-sm font-medium text-indigo-700 dark:text-indigo-300">Oct 2025 - Apr 2026</span>
+          <span className="text-sm font-medium text-indigo-700 dark:text-indigo-300">Nov 2025 - Future</span>
         </div>
         
         <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 leading-tight">

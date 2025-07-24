@@ -94,7 +94,7 @@ export default function Navigation() {
       className="sticky top-20 z-40 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50"
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
-        <div className="flex items-center space-x-8 overflow-x-auto">
+        <div className="flex items-center space-x-8 overflow-x-none">
           {navigationItems.map((item, index) => (
             <motion.button
               key={item.id}

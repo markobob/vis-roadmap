@@ -18,7 +18,7 @@ export default function Vision() {
     },
     {
       icon: '⚡',
-      scenario: 'Every team member, regardless of role, finds what they need — fast.',
+      scenario: 'Every user, regardless of role, finds what they need — fast.',
       demoKey: 'discovery'
     },
     {

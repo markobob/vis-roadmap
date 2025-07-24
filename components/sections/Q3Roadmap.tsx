@@ -11,7 +11,7 @@ export default function Q3Roadmap() {
       description: 'Targeted views for CRM, Loyalty, Insight, and CX.',
       details: [
         'Flagship dashboard for core customer insights',
-        'Purpose: Clarity on "what\'s happening" and "for whom"'
+        'Purpose: Answers to key Customer questions in a few clicks, automated outputs for monthly packs and reports.'
       ],
       priority: 'High',
       timeline: 'Jul - Sep 2025',
@@ -23,7 +23,7 @@ export default function Q3Roadmap() {
       title: 'Campaign Dashboard',
       description: 'One place for all campaign types + engagement data.',
       details: [
-        'Purpose: Optimise channel mix and campaign design',
+        'Purpose: Gain insight on past and present campaigns to drive better campaigns in the future.',
         'Decision support: "What works where, and for whom?"'
       ],
       priority: 'High',
@@ -68,7 +68,7 @@ export default function Q3Roadmap() {
       >
         <div className="inline-flex items-center space-x-3 px-4 py-2 bg-orange-50 dark:bg-orange-900/20 rounded-full">
           <span className="text-2xl">🚀</span>
-          <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Jul - Dec 2025</span>
+          <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Aug 2025 - Jan 2026</span>
         </div>
         
         <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
