@@ -12,7 +12,7 @@ export default function Q4Beyond() {
   const q4Items = [
     {
       icon: '🧠',
-      title: 'Data Science in Reporting',
+      title: 'Data Science in Reporting / Model Tracking',
       description: 'Model outputs (churn, HRHV, incremental) embedded into dashboards.',
       details: [
         'Model performance tracking',
@@ -25,7 +25,7 @@ export default function Q4Beyond() {
     {
       icon: '🧱',
       title: 'Python API for Analysts',
-      description: 'e.g., bq.cust.journey(1234)',
+      description: 'e.g. bq.cust.journey(1234)',
       details: [
         'Purpose: Lower barrier to advanced insight, control, force multiplier, single source truth',
         'Outcome: Reusability, speed, analyst empowerment'
